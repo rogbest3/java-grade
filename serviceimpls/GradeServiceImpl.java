@@ -16,7 +16,7 @@ public class GradeServiceImpl implements GradeService{
 	
 	@Override
 	public void createGrade(GradeBean param) {
-		param.setHakbun(createHakbun(param));
+	//	param.setHakbun(createHakbun(param));
 		param.setSum(gradeSum(param));
 		param.setAvg(gradeAvg(param));
 		dao.insertHakbun(param);
@@ -26,7 +26,7 @@ public class GradeServiceImpl implements GradeService{
 	public String createHakbun(GradeBean param) {
 		Random random = new Random();
 		String hakbun = "2019-";
-		hakbun += param.getSsn().substring(7,8) + String.format("%03d", random.nextInt(999)+1);
+//		hakbun += param.getSsn().substring(7,8) + String.format("%03d", random.nextInt(999)+1);
 	//	System.out.println(hakbun);
 		return hakbun;
 	}

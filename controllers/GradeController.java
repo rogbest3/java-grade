@@ -28,12 +28,9 @@ public class GradeController extends HttpServlet {
 		System.out.println(ssn);
 		GradeBean param = new GradeBean();
 		param.setEng(eng);
-	//	param.setHakbun(hakbun);
 		param.setKor(kor);
 		param.setMath(math);
-		param.setName(name);
 		param.setSoc(soc);
-		param.setSsn(ssn);
 		GradeService service = new GradeServiceImpl();
 	//	System.out.println(param.getSsn());
 		service.createGrade(param);
